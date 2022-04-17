@@ -1,0 +1,249 @@
+/* ==UserStyle==
+@name           Web+
+@version        5.6
+@description    Improves the design of the web!
+@updateURL      https://raw.githubusercontent.com/ItsFoxDev/WebPlus/main/WebPlus.user.css
+==/UserStyle== */
+/* Global & Imports*/
+
+/*   ___ _            __      __   _     */
+/*  / __| |___ __ _ _ \ \    / /__| |__  */
+/* | (__| / -_) _` | ' \ \/\/ / -_) '_ \ */
+/*  \___|_\___\__,_|_||_\_/\_/\___|_.__/ */
+/*      Made by @ItsFoxDev on GitHub     */
+
+/* CleanWeb is only officially supported */
+/*   and tested on the latest Firefox    */
+
+/* == ⬇️ IMPORTS =============================== */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap');
+
+@-moz-document domain("youtube.com") {
+/* Youtube */
+
+/* == ⭕️ ROUNDING ELEMENTS ===================== */
+/* Rounds user avatars     */ #avatar,.ytp-ce-expanding-image,yt-img-shadow,yt-img-shadow.ytd-channel-renderer,.branding-img,yt-img-shadow.ytd-grid-channel-renderer{border-radius:10px !important}
+/* Rounds thumbnails       */ #thumbnail,.ytp-videowall-still-image,.ytp-ce-element{border-radius:10px !important; background:transparent}
+/* Rounds buttons          */ #button,#chat,tp-yt-paper-button,ytd-button-renderer,td.style-scope:nth-child(3) > ytd-button-renderer:nth-child(1),#voice-search-button,ytd-subscribe-button-renderer.ytd-c4-tabbed-header-renderer > tp-yt-paper-button:nth-child(1),ytd-button-renderer.style-suggestive{border-radius:5px !important}
+/* Rounds search bar       */ div.ytd-searchbox:nth-child(1){border-radius:5px 0px 0px 5px !important}
+/* Rounds search button    */ #search-icon-legacy{border-radius:0px 5px 5px 0px !important}
+/* Rounds voice search     */ #voice-search-button{border-radius:5px !important}
+/* Rounds video overlays   */ #hover-overlays,#overlays,#mouseover-overlay{border-radius:5px !important}
+/* Rounds video time       */ ytd-thumbnail-overlay-toggle-button-renderer,ytd-thumbnail-overlay-time-status-renderer{border-radius:5px !important}
+/* Rounds posts            */ ytd-post-renderer:not(#repost-context):not(#original-post),#repost-context{border-radius:10px !important}
+/* Rounds categories       */ yt-chip-cloud-chip-renderer{border-radius:5px !important}
+/* Rounds video player     */ #movie_player{border-radius:5px !important}
+/* Rounds subscribe button */ tp-yt-paper-button.ytd-subscribe-button-renderer{border-radius:10px}
+/* Rounds context menus    */ .ytp-contextmenu,tp-yt-iron-dropdown,ytd-menu-popup-renderer{border-radius:5px !important}
+/* Rounds press effect     */ #interaction > * {border-radius:5px !important}
+/* Rounds notifs panel     */ ytd-multi-page-menu-renderer{border-radius:5px !important}
+/* Rounds notif thumbs     */ .thumbnail-container{border-radius:5px}
+/* Rounds subtitles        */ .captions-text,.caption-visual-line{border-radius:5px}
+/* Rounds scrubber         */ .ytp-scrubber-buttonborder-radius{border-radius:3px !important}
+/* Rounds notif counter    */ #notification-count{border-radius: 5px}
+/* Rounds video subjects   */ ytd-rich-metadata-renderer{border-radius:5px !important}
+/* Rounds scrub preview    */ .ytp-tooltip.ytp-bottom,.ytp-tooltip-bg,a.ytp-next-button.ytp-button {border-radius: 8px !important;}
+/* Rounds live chat        */ ytd-toggle-button-renderer.ytd-live-chat-frame{border-radius:5px}
+
+/* == ➡️ ANIMATIONS ============================ */
+/* Thumb hover animation   */ #thumbnail{transition: all .2s ease-in-out;} #thumbnail:hover{transform: scale(1.1);}
+
+/* == ❌ ITEM REMOVAL ========================== */
+/* Hides country code      */ #country-code{display: none}
+/* Hides footer on sidebar */ #footer{display:none}
+
+/* == 🎨 COLOUR + BLUR ========================= */
+/* Colours timestamps      */ .ytp-ce-video-duration,ytd-thumbnail-overlay-time-status-renderer{background-color: rgba(53, 53, 53, 0.49) !important;backdrop-filter: blur(10px) !important}
+
+/* == MISCELLANEOUS ========================= */
+/* Makes title bold        */ yt-formatted-string.ytd-video-primary-info-renderer:nth-child(1),ytp-title-text,ytp-title-link,ytp-title-fullerscreen-link,.ytp-title-link{font-family: 'Noto Sans', sans-serif;}
+/* Fixes thumbnail bgs     */ ytd-thumbnail.ytd-rich-grid-media::before{background:transparent !important}
+/* Removes subtitle bg     */ .caption-window{background-color:transparent !important}
+
+    /*like & dislike animation*/
+    @keyframes voting {
+        0% {transform: scale(0.5);}
+        10% {
+            transform: rotate(-4deg) scale(1.3);
+        }
+        30% {
+            transform: rotate(-6deg) scale(1.7)
+        }
+        70% {
+            transform: rotate(3deg) scale(0.6)
+        }
+        100% {
+            transform: rotate(0deg) scale(1)
+        }
+    }
+    /*like animation time*/
+    #info ytd-toggle-button-renderer:nth-of-type(1) .style-default-active yt-icon {
+        animation: voting 1.1s ease forwards;
+    }
+    /*dislike animation time*/
+    #info ytd-toggle-button-renderer:nth-of-type(2) .style-default-active yt-icon {
+        animation: voting 1.1s ease forwards;
+    }
+}
+
+@-moz-document domain("macosicons.com") {
+/* MacosIcons */
+
+/* == ❌ ITEM REMOVAL ========================== */
+/* Hides donate popup      */ #stickyBanner {display:none}
+/* Hides adblock popup     */ .icon-list-area > div:nth-child(1){display:none}
+}
+
+@-moz-document domain("zoom.us") {
+/* Zoom */
+
+/* == ❌ ITEM REMOVAL ========================== */
+/* Hides input button      */ .EOquiHKJ {display:none !important}
+/* Hides cookies button    */ #ot-sdk-btn-floating {display:none}
+/* Hides copyright notice  */ #footer_container {display: none}
+}
+
+@-moz-document domain("mail.google.com") {
+/* Gmail */
+
+/* == ⭕️ ROUNDING ELEMENTS ===================== */
+/* Rounds compose button   */ .T-I-KE{border-radius:8px !important}
+/* Rounds categories       */ .TO{border-radius: 5px !important}
+/* Rounds status bar       */ .Yb{border-radius:10px}
+/* Rounds profile picture  */ .gb_Aa{border-radius:10px}
+/* Rounds pfps in emails   */ .ajn{border-radius:5px}
+/* Rounds email viewer     */ #\:3,.bAn{border-radius:5px}
+/* Category bg rounding    */ .bhZ.bym{border-radius: 0px 10px 10px 0px}
+/* Rounds selections       */ .gb_A,.gb_Ac,a[role="button"]{border-radius:5px}
+/* Rounds email list       */ tr.zA:last-child{border-radius: 0px 0px 10px 10px;} tr:first-child{border-radius: 10px 10px 0px 0px} tr:only-child{border-radius:10px !important}
+/* Rounds settings popup   */ .IU{border-radius:10px}
+/* Search filters popup    */ .ZF-zT{border-radius: 10px; border: none !important}
+/* Yellow box rounding     */ .vh{border-radius:5px}
+/* Rounds attatchments     */ .brc{border-radius:5px !important}
+/* Rounds no email box     */ .qd{border-radius:5px}
+
+/* == 🕶 SHADOWS =============================== */
+/* Seach bar shadow        */ #aso_search_form_anchor{box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px !important}
+/* Compose button shadow   */ .T-I-KE{box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px !important}
+/* Status bar shadow       */ .Yb{border-radius:10px; box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px !important}
+/* Profile picture shadow  */ .gb_Aa{ box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px !important}
+
+/* == 🎨 COLOUR + BLUR ========================= */
+/* Makes compose trans.    */ .T-I-KE{background:rgba(255, 255, 255, .87) !important}
+/* Category bg colour fix  */ .bhZ.bym{background-color:#0000005e}
+/* Yellow box colouring    */ .vh{border: 1px solid #d6d6d6 !important; background-color: white !important}
+
+/* == ❌ ITEM REMOVAL ========================== */
+/* Hides input tools       */ .aBS{display: none}
+/* Hides line beside email */ .PE{display:none !important}
+/* Hides admin logo        */ .gb_ia{display:none !important} .gb_ga{width:unset !important}
+
+/* == 🔧 TWEAKS ================================ */
+/* Shows logo when empty   */ .qd{padding-left:10px; background-image:url("http://svgur.com/i/fuX.svg"); background-repeat:no-repeat; background-position:center; background-size:30px; text-indent: 100%; white-space: nowrap; overflow: hidden;} .aVj{margin:unset !important}
+/* Hides admin logo        */ .gb_ga{border:none !important}
+/* Yellow box padding      */ .vh{padding-top:5px !important; margin-top:5px !important}
+
+}
+
+@-moz-document domain("schoology.com") {
+/* Schoology */
+
+/* == ⭕️ ROUNDING ELEMENTS ===================== */
+/* Class rounding          */ .sgy-card-lens{border-radius:10px 10px 0px 0px !important} .sgy-card,.imagecache{border-radius:10px !important}
+/* Right panel rounding    */ #right-column,#overdue-submissions,.upcoming-events{border-radius:10px !important}
+/* Materials selection     */ .course-materials-left-menu,.active{border-radius:10px 0px 0px 10px}
+/* Button rounding         */ .link-btn,.cancel-btn,.materials-dropdown-arrow,.portfolio-add-submission-btn__wrap,#edit-course-switcher-select-nid-button,button._3Lgtj:nth-child(1),button._1SIMq:nth-child(2),.submit-span-wrapper,.fc-button-today{border-radius:5px}
+/* Menu popup rounding     */ .inline-popup-wrapper,div[role="menu"],ul[role="menu"]{border-radius:10px}
+/* Calendar event rounding */ .fc-event{border-radius:5px}
+/* Calendar buttons        */ .fc-button-month,.fc-button-prev{border-radius:5px 0px 0px 5px} .fc-button-next,.fc-button-agendaDay{border-radius:0px 5px 5px 0px}
+/* iframe rounding         */ iframe{border-radius:10px}
+/* Upload tabs rounding    */ #dropbox-submit-upload-tab,#dropbox-submit-create-tab,#dropbox-submit-resources-tab{border-radius:5px 5px 0px 0px}
+/* Rounds popups           */ #popups-0,#edit-course-switcher-select-nid-menu{border-radius:10px} .popups-title{border-radius:5px 5px 0px 0px} .popups-body{border-radius:0px 0px 5px 5px}
+/* Rounds submission items */ .form-textarea,#attachments,.edit-submission_tbl{border-radius:5px}
+/* Rounds popup hover      */ #edit-course-switcher-select-nid-menu .ui-selectmenu-group li:hover a{border-radius:5px}
+/* Rounds viewer buttons   */ #control.ui-widget-header .toggleControl .glyphicons.has-svg.active svg{border-radius:5px}
+/* Rounds popup windows    */ .popups-body{border-radius: 0px 0px 10px 10px;}
+/* Rounds search bars      */ #library-search-query{border-radius:5px} #library-search-form-container > div:nth-child(1){border-radius:10px}
+
+/* == 🕶 SHADOWS =============================== */
+/* Class shadows           */ .sgy-card,.sgy-card:hover{box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;}
+/* Neater popup shadow     */ .popups-box{background:none !important; box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; padding:unset !important; width:850px}
+
+/* == ❌ ITEM REMOVAL ========================== */
+/* Hides S Icon            */ ._pendo-launcher-badge_{display:none}
+/* Hides accessibility     */ .course-dashboard__accessibility-icon{display: none}
+/* Hides main menu tabs    */ .sgy-tabbed-navigation{display: none}
+/* Hides popup outline     */ #popups-0{background:none !important}
+
+/* == 🔧 TWEAKS ================================ */
+/* Thumb Positioning       */ .course-dashboard__card-lens-svg{left:0% !important; top:0% !important;transform:none !important;position: inherit}
+/* Grid of 3 classes       */ .sgy-grid-layout__item{margin:10px !important; width:30.33333334%} .sgy-card-lens{height:50% !important}
+/* School icon size        */ a._2JX1Q{scale: 80%; object-fit: fill; width:60px; height: 60px}
+/* Search bar enhancements */ ._1Z0RM{border:rgba(0, 0, 0, 0) !important}
+/* Fixes pfp spacing       */ .gb_na:not(.gb_oa) .gb_ga{margin-left:0px !important} .gb_na.gb_Re .gb_La.gb_hd,.gb_La{padding-left:0px !important}
+
+/* == 🎨 COLOURING ============================= */
+/* Button/dropdown colour  */ .link-btn,.notification-settings,.ui-selectmenu,.ui-widget{background:#f0f0f0; background-color:#f0f0f0}
+/* Calendar today colour   */ .fc-state-highlight{background:#d9d9d9}
+
+/* == ➡️ ANIMATIONS ============================ */
+/* Class hover animation   */ .sgy-card{transition: all .2s ease-in-out;} .sgy-card:hover{transform: scale(1.1);}
+}
+
+@-moz-document url-prefix("https://panzoid.com") {
+/* Panzoid */
+
+/* == ⭕️ ROUNDING ELEMENTS ===================== */
+/* Rounds creation thumbs  */ div.creationItem > a > img{border-radius:10px !important} div.creationItem > a >img{background-color:transparent !important} #controls > div:nth-child(1) > div:nth-child(5) > * > * {border-radius:10px} #controls > div:nth-child(1) > div:nth-child(5) > * {background-color:transparent !important}
+/* Rounds profile pictures */ .avatar{border-radius:10px !important}
+/* Rounds progress bar     */ .pz-progress{border-radius:5px}
+/* Rounds media in editor  */ .media-item,.media-item-img > img:nth-child(1){border-radius:10px !important}
+/* Rounds editor search    */ .pz-filterbox{border-radius:5px}
+/* Rounds project exports  */ a.proprow:first-child{border-radius:10px 10px 0px 0px} a.proprow:nth-child(4){border-radius:0px 0px 10px 10px}
+/* Rounds input boxes      */ .pz-inputbox,.pzinput{border-radius:5px}
+/* Rounds font box         */ .pz-tweens{border-radius:5px}
+/* Rounds panels in editor */ .editorpanel{border-radius:5px}
+
+/* == ➡️ ANIMATIONS ============================ */
+/* Project/avatar hover    */ .creation,.avatar{transition: all .2s ease-in-out;} .creation:hover{transform: scale(1.05);} .avatar:hover{transform: scale(1.1);}
+/* Smooth render prog. bar */ .pz-progress > span{transition: width .6s ease}
+
+/* == 🎨 COLOURING ============================= */
+/* Button hover colour     */ .propbutton:hover,.pz-inputbox{background-color:#626262; cursor:pointer}
+/* Editor media hover      */ .media-item:hover{background-color:#444 !important}
+/* Render prog. bar colour */ .pz-progress > span{box-shadow:none !important; background: linear-gradient(312deg, rgba(0,86,255,1) 0%, rgba(0,212,255,1) 100%)}
+
+/* == 🔧 TWEAKS ================================ */
+/* Button spacing          */ .propbutton{margin-left:0.5vw !important; margin-right:0.5vw !important; width:96% !important} #controls{padding-top:0.5vw !important}
+}
+
+@-moz-document url-prefix("https://accounts.google.com") {
+/* Google Accounts */
+.qQWzTd{border-radius:7px}
+}
+
+@-moz-document domain("docs.google.com") {
+/* Google Docs */
+
+/* == ⭕️ ROUNDING ELEMENTS ===================== */
+/* Rounds templates        */ .docs-homescreen-templates-templateview-preview{border-radius:10px}
+/* Rounds docs in list     */ .docs-homescreen-list-item{border-radius:10px !important; border-bottom:none !important}
+/* Rounds docs in grid     */ .docs-homescreen-grid-item{border-radius:10px} .docs-homescreen-grid-item-thumbnail{border-radius:10px 10px 0px 0px}
+/* Rounds docs viewer      */ div.kix-canvas-tile-content:nth-child(2) > svg:nth-child(1),.kix-stacked-tile-page-shadow{border-radius:10px !important}
+/* Rounds new slide temps  */ .docs-preview-palette-item{border-radius:5px}
+/* Rounds app bar opener   */ .app-switcher-button-icon-background{border-radius:10px}
+/* Rounds tooltips         */ .companion-tooltip{border-radius:5px}
+/* Rounds speaker notes    */ #speakernotes-dragger{border-radius:5px 5px 0px 0px}
+/* Rounds buttons          */ .ksO4Qc{border-radius:5px}
+
+/* == ❌ ITEM REMOVAL ========================== */
+/* Hides unused buttons    */ #punch-explore-widget, #inputToolsSeparator, #outdentButton, #indentButton, #clearFormattingButton, #clearFormattingSeparator, #textLtrButton, #textRtlButton {display: none} 
+/* Hides explore button    */ .docs-explore-widget{display: none !important}
+}
+
+@-moz-document url-prefix("moz-extension://") {
+/* Stylus */
+
+/* == ⭕️ ROUNDING ELEMENTS ===================== */
+/* Rounds code editor      */ .CodeMirror{border-radius:5px}
+}
