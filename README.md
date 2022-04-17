@@ -10,4 +10,4 @@
 # ℹ️ Notes
 • This style is only tested on Firefox
 <br>
-• Bugs may occur on other browsers'
+• Bugs may occur on other browsers
