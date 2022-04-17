@@ -61,30 +61,6 @@
 /* Fixes thumbnail bgs     */ ytd-thumbnail.ytd-rich-grid-media::before{background:transparent !important}
 /* Removes subtitle bg     */ .caption-window{background-color:transparent !important}
 
-    /*like & dislike animation*/
-    @keyframes voting {
-        0% {transform: scale(0.5);}
-        10% {
-            transform: rotate(-4deg) scale(1.3);
-        }
-        30% {
-            transform: rotate(-6deg) scale(1.7)
-        }
-        70% {
-            transform: rotate(3deg) scale(0.6)
-        }
-        100% {
-            transform: rotate(0deg) scale(1)
-        }
-    }
-    /*like animation time*/
-    #info ytd-toggle-button-renderer:nth-of-type(1) .style-default-active yt-icon {
-        animation: voting 1.1s ease forwards;
-    }
-    /*dislike animation time*/
-    #info ytd-toggle-button-renderer:nth-of-type(2) .style-default-active yt-icon {
-        animation: voting 1.1s ease forwards;
-    }
 }
 
 @-moz-document domain("macosicons.com") {
