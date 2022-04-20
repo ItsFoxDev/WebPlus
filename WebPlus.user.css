@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name           Web+
-@version        5.6
+@version        5.6.1
 @description    Improves the design of the web!
 @updateURL      https://raw.githubusercontent.com/ItsFoxDev/WebPlus/main/WebPlus.user.css
 @namespace      ItsFoxDev
@@ -97,7 +97,7 @@
 /* Search filters popup    */ .ZF-zT{border-radius: 10px; border: none !important}
 /* Yellow box rounding     */ .vh{border-radius:5px}
 /* Rounds attatchments     */ .brc{border-radius:5px !important}
-/* Rounds no email box     */ .qd{border-radius:5px}
+/* Rounds no email box     */ .qd{border-radius:10px}
 
 /* == 🕶 SHADOWS =============================== */
 /* Seach bar shadow        */ #aso_search_form_anchor{box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px !important}
