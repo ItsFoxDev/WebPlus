@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name           Web+
-@version        5.6.1
+@version        5.7
 @description    Improves the design of the web!
 @updateURL      https://raw.githubusercontent.com/ItsFoxDev/WebPlus/main/WebPlus.user.css
 @namespace      ItsFoxDev
@@ -17,7 +17,7 @@
 /*   and tested on the latest Firefox    */
 
 /* == ⬇️ IMPORTS =============================== */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap');
+/* None here yet... */
 
 @-moz-document domain("youtube.com") {
 /* Youtube */
@@ -32,6 +32,7 @@
 /* Rounds video overlays   */ #hover-overlays,#overlays,#mouseover-overlay{border-radius:5px !important}
 /* Rounds video time       */ ytd-thumbnail-overlay-toggle-button-renderer,ytd-thumbnail-overlay-time-status-renderer{border-radius:5px !important}
 /* Rounds posts            */ ytd-post-renderer:not(#repost-context):not(#original-post),#repost-context{border-radius:10px !important}
+/* Rounds post content     */ .ytd-post-renderer{border-radius:10px !important}
 /* Rounds categories       */ yt-chip-cloud-chip-renderer{border-radius:5px !important}
 /* Rounds video player     */ #movie_player{border-radius:5px !important}
 /* Rounds subscribe button */ tp-yt-paper-button.ytd-subscribe-button-renderer{border-radius:10px}
@@ -45,6 +46,8 @@
 /* Rounds video subjects   */ ytd-rich-metadata-renderer{border-radius:5px !important}
 /* Rounds scrub preview    */ .ytp-tooltip.ytp-bottom,.ytp-tooltip-bg,a.ytp-next-button.ytp-button {border-radius: 8px !important;}
 /* Rounds live chat        */ ytd-toggle-button-renderer.ytd-live-chat-frame{border-radius:5px}
+/* Rounds scrubber         */ .ytp-scrubber-button{border-radius:3px !important; box-shadow: rgb(0, 0, 0) 0px 8px 24px !important}
+/* Rounds progress bar     */ .ytp-progress-list,.ytp-progress-list > *,.ytp-progress-bar{border-radius:3px !important}
 
 /* == ➡️ ANIMATIONS ============================ */
 /* Thumb hover animation   */ #thumbnail{transition: all .2s ease-in-out;} #thumbnail:hover{transform: scale(1.1);}
@@ -86,18 +89,20 @@
 /* == ⭕️ ROUNDING ELEMENTS ===================== */
 /* Rounds compose button   */ .T-I-KE{border-radius:8px !important}
 /* Rounds categories       */ .TO{border-radius: 5px !important}
-/* Rounds status bar       */ .Yb{border-radius:10px}
-/* Rounds profile picture  */ .gb_Aa{border-radius:10px}
-/* Rounds pfps in emails   */ .ajn{border-radius:5px}
-/* Rounds email viewer     */ #\:3,.bAn{border-radius:5px}
-/* Category bg rounding    */ .bhZ.bym{border-radius: 0px 10px 10px 0px}
-/* Rounds selections       */ .gb_A,.gb_Ac,a[role="button"]{border-radius:5px}
+/* Rounds status bar       */ .Yb{border-radius:10px !important}
+/* Rounds pfps in emails   */ .ajn{border-radius:5px !important}
+/* Rounds email viewer     */ #\:3,.bAn{border-radius:10px !important}
+/* Category bg rounding    */ .bhZ.bym{border-radius: 0px 10px 10px 0px !important}
+/* Rounds selections       */ .gb_A,.gb_Ac,a[role="button"],.hk > .L3::before, .acX > .L3::before{border-radius:5px !important}
 /* Rounds email list       */ tr.zA:last-child{border-radius: 0px 0px 10px 10px;} tr:first-child{border-radius: 10px 10px 0px 0px} tr:only-child{border-radius:10px !important}
-/* Rounds settings popup   */ .IU{border-radius:10px}
+/* Rounds settings popup   */ .IU{border-radius:10px !important}
 /* Search filters popup    */ .ZF-zT{border-radius: 10px; border: none !important}
-/* Yellow box rounding     */ .vh{border-radius:5px}
+/* Yellow box rounding     */ .vh{border-radius:5px !important}
 /* Rounds attatchments     */ .brc{border-radius:5px !important}
-/* Rounds no email box     */ .qd{border-radius:10px}
+/* Rounds no email box     */ .qd{border-radius:10px !important}
+/* Rounds formatting box   */ div[aria-label="Formatting options"]{border-radius:5px !important}
+/* Rounds email details    */ .ajA{border-radius:5px !important}
+/* Rounds button hover     */ .asa::before{border-radius:5px !important}
 
 /* == 🕶 SHADOWS =============================== */
 /* Seach bar shadow        */ #aso_search_form_anchor{box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px !important}
@@ -108,14 +113,14 @@
 /* == 🎨 COLOUR + BLUR ========================= */
 /* Makes compose trans.    */ .T-I-KE{background:rgba(255, 255, 255, .87) !important}
 /* Category bg colour fix  */ .bhZ.bym{background-color:#0000005e}
-/* Yellow box colouring    */ .vh{border: 1px solid #d6d6d6 !important; background-color: white !important}
+/* Yellow box colouring    */ .vh{border: 1px solid #d6d6d6 !important; background-color: white !important; filter: grayscale(1) invert(1);}
 
 /* == ❌ ITEM REMOVAL ========================== */
 /* Hides input tools       */ .aBS{display: none}
 /* Hides line beside email */ .PE{display:none !important}
 /* Hides admin logo        */ .gb_ia{display:none !important} .gb_ga{width:unset !important}
 
-/* == 🔧 TWEAKS ================================ */
+/* == 🔧 TWEAKS/FIXES ========================== */
 /* Shows logo when empty   */ .qd{padding-left:10px; background-image:url("http://svgur.com/i/fuX.svg"); background-repeat:no-repeat; background-position:center; background-size:30px; text-indent: 100%; white-space: nowrap; overflow: hidden;} .aVj{margin:unset !important}
 /* Hides admin logo        */ .gb_ga{border:none !important}
 /* Yellow box padding      */ .vh{padding-top:5px !important; margin-top:5px !important}
@@ -152,10 +157,10 @@
 /* Hides main menu tabs    */ .sgy-tabbed-navigation{display: none}
 /* Hides popup outline     */ #popups-0{background:none !important}
 
-/* == 🔧 TWEAKS ================================ */
+/* == 🔧 TWEAKS/FIXES ========================== */
 /* Thumb Positioning       */ .course-dashboard__card-lens-svg{left:0% !important; top:0% !important;transform:none !important;position: inherit}
 /* Grid of 3 classes       */ .sgy-grid-layout__item{margin:10px !important; width:30.33333334%} .sgy-card-lens{height:50% !important}
-/* School icon size        */ a._2JX1Q{scale: 80%; object-fit: fill; width:60px; height: 60px}
+/* School icon size        */ ._1LY8n{scale: 80%; object-fit: fill; width:60px; height: 60px}
 /* Search bar enhancements */ ._1Z0RM{border:rgba(0, 0, 0, 0) !important}
 /* Fixes pfp spacing       */ .gb_na:not(.gb_oa) .gb_ga{margin-left:0px !important} .gb_na.gb_Re .gb_La.gb_hd,.gb_La{padding-left:0px !important}
 
@@ -190,13 +195,8 @@
 /* Editor media hover      */ .media-item:hover{background-color:#444 !important}
 /* Render prog. bar colour */ .pz-progress > span{box-shadow:none !important; background: linear-gradient(312deg, rgba(0,86,255,1) 0%, rgba(0,212,255,1) 100%)}
 
-/* == 🔧 TWEAKS ================================ */
+/* == 🔧 TWEAKS/FIXES ========================== */
 /* Button spacing          */ .propbutton{margin-left:0.5vw !important; margin-right:0.5vw !important; width:96% !important} #controls{padding-top:0.5vw !important}
-}
-
-@-moz-document url-prefix("https://accounts.google.com") {
-/* Google Accounts */
-.qQWzTd{border-radius:7px}
 }
 
 @-moz-document domain("docs.google.com") {
@@ -218,9 +218,59 @@
 /* Hides explore button    */ .docs-explore-widget{display: none !important}
 }
 
-@-moz-document url-prefix("moz-extension://") {
+@-moz-document url-prefix("moz-extension://a32360e5-43be-4fa7-8df7-f8405f3a045c") {
 /* Stylus */
 
 /* == ⭕️ ROUNDING ELEMENTS ===================== */
-/* Rounds code editor      */ .CodeMirror{border-radius:5px}
+/* Rounds code editor      */ .CodeMirror{border-radius:5px !important}
+/* Rounds buttons          */ button{border-radius:5px !important}
+/* Rounds the help popup   */ #help-popup{border-radius:5px !important}
+/* Rounds inputs           */ select,input{border-radius:5px}
+/* Rounds sections         */ #toc > * {border-radius:5px !important}
+/* Rounds options popup    */ #stylus-options{border-radius:10px !important} #options-title{border-radius:10px 10px 0px 0px} #options{border-radius:0px 0px 10px 10px}
+
+/* == 🔧 TWEAKS/FIXES ========================== */
+/* Links to buttons        */ #find-styles-link{text-decoration: none !important;background-color: #fff; color: #333333; padding: 6px 12px 6px 12px;border: 1px solid #CCCCCC; border-radius:5px}#find-styles-link:hover{background-color:#e2e2e2}
+
+/* == 🎨 COLOURING ============================= */
+/* Button/input colouring  */ button{background: #fff !important; color: #000 !important; padding: 6px 12px 6px 12px !important;border: 1px solid #CCCCCC !important}
+/* Button hover effect     */ button:hover{background:#e2e2e2 !important}
+/* Checkbox color + hover  */ input[type="checkbox"]:not(.slider){background:#fff !important} input[type="checkbox"]:hover{background:#e2e2e2 !important}
+}
+
+@-moz-document domain("google.com"), regexp("www.google.com") {
+/* Google Search*/
+
+/* == ⭕️ ROUNDING ELEMENTS ===================== */
+/* Rounds search bar       */ .RNNXgb{border-radius:10px !important;}
+/* Rounds search results   */ .UUbT9{border-radius:0px 0px 10px 10px !important}
+/* Rounds related topics   */ .k8XOCe{border-radius:10px}
+
+/* == 🔧 TWEAKS/FIXES ========================== */
+}
+
+@-moz-document url-prefix("http://example.com") {
+/* Github */
+
+/* == ⭕️ ROUNDING ELEMENTS ===================== */
+/* Rounds labels           */ .Label{border-radius:5px !important}
+/* Rounds tags             */ .topic-tag-link{border-radius:unset}.topic-tag-link{border-radius:5px !important}
+}
+
+@-moz-document domain("twitch.tv") {
+/* Twitch */
+
+/* == ⭕️ ROUNDING ELEMENTS ===================== */
+/* Rounds player           */ video,.player__container{border-radius:10px !important}
+/* Rounds avatars          */ .tw-image-avatar,.tw-halo{border-radius:10px !important}
+/* Rounds stream tags      */ .tw-tag{border-radius:5px !important}
+/* Rounds channel info     */ .home-carousel-info{border-radius:10px}
+}
+
+@-moz-document domain("drive.google.com") {
+/* Google Accounts */
+
+/* == ⭕️ ROUNDING ELEMENTS ===================== */
+/* Rounds sidebar          */ .a-U-J{border-radius:0px 10px 10px 0px}
+/* Rounds button hovers    */ .a-c-d{border-radius:5px !important}
 }
