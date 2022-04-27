@@ -1,26 +1,29 @@
 /* ==UserStyle==
 @name           Web+
-@version        5.7.1
+@version        5.7.2
 @description    Improves the design of the web!
 @updateURL      https://raw.githubusercontent.com/ItsFoxDev/WebPlus/main/WebPlus.user.css
 @namespace      ItsFoxDev
 ==/UserStyle== */
 /* Global & Imports*/
 
-/*   ___ _            __      __   _     */
-/*  / __| |___ __ _ _ \ \    / /__| |__  */
-/* | (__| / -_) _` | ' \ \/\/ / -_) '_ \ */
-/*  \___|_\___\__,_|_||_\_/\_/\___|_.__/ */
-/*      Made by @ItsFoxDev on GitHub     */
+/* Global & Imports*/  
+/*  __          __  _          
+/*  \ \        / / | |     _     */
+/*   \ \  /\  / /__| |__ _| |_   */
+/*    \ \/  \/ / _ \ '_ \_   _|  */
+/*     \  /\  /  __/ |_) ||_|    */
+/*      \/  \/ \___|_.__/        */
+/* Made by @ItsFoxDev on GitHub  */
 
-/* CleanWeb is only officially supported */
-/*   and tested on the latest Firefox    */
-
-/* == ⬇️ IMPORTS =============================== */
-/* None here yet... */
+/* Web+ is only officially supported */
+/* and tested on the latest Firefox  */
 
 @-moz-document domain("youtube.com") {
 /* Youtube */
+
+/* == ⬇️ IMPORTS =============================== */
+/* Imports bold font       */ @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap');
 
 /* == ⭕️ ROUNDING ELEMENTS ===================== */
 /* Rounds user avatars     */ #avatar,.ytp-ce-expanding-image,yt-img-shadow,yt-img-shadow.ytd-channel-renderer,.branding-img,yt-img-shadow.ytd-grid-channel-renderer{border-radius:10px !important}
@@ -217,7 +220,7 @@
 /* Hides explore button    */ .docs-explore-widget{display: none !important}
 }
 
-@-moz-document url-prefix("moz-extension://a32360e5-43be-4fa7-8df7-f8405f3a045c") {
+@-moz-document url-prefix("chrome-extension://clngdbkpkpeebahjckkjfobafhncgmne"), url-prefix("moz-extension://a32360e5-43be-4fa7-8df7-f8405f3a045c") {
 /* Stylus */
 
 /* == ⭕️ ROUNDING ELEMENTS ===================== */
