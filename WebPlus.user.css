@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name           Web+
-@version        5.7
+@version        5.7.1
 @description    Improves the design of the web!
 @updateURL      https://raw.githubusercontent.com/ItsFoxDev/WebPlus/main/WebPlus.user.css
 @namespace      ItsFoxDev
@@ -160,9 +160,8 @@
 /* == 🔧 TWEAKS/FIXES ========================== */
 /* Thumb Positioning       */ .course-dashboard__card-lens-svg{left:0% !important; top:0% !important;transform:none !important;position: inherit}
 /* Grid of 3 classes       */ .sgy-grid-layout__item{margin:10px !important; width:30.33333334%} .sgy-card-lens{height:50% !important}
-/* School icon size        */ ._1LY8n{scale: 80%; object-fit: fill; width:60px; height: 60px}
+/* School icon size        *| ._1LY8n{scale: 80%; object-fit: fill; width:60px; height: 60px}
 /* Search bar enhancements */ ._1Z0RM{border:rgba(0, 0, 0, 0) !important}
-/* Fixes pfp spacing       */ .gb_na:not(.gb_oa) .gb_ga{margin-left:0px !important} .gb_na.gb_Re .gb_La.gb_hd,.gb_La{padding-left:0px !important}
 
 /* == 🎨 COLOURING ============================= */
 /* Button/dropdown colour  */ .link-btn,.notification-settings,.ui-selectmenu,.ui-widget{background:#f0f0f0; background-color:#f0f0f0}
